@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=h2, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Material+Symbols+Outlined:wght@100&family=Montserrat:wght@300;500&display=swap">
+	<title>Document</title>
+</head>
+
+<body
+	style="padding:4% 8%;display:flex;flex-direction: column;justify-content: center;align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 300; gap:10px;">
+	<img style="margin-bottom: 10px" src="https://wxccdemo.s3.us-west-1.amazonaws.com/images/webex/webex-symbol.png"
+		alt="Cisco Webex">
+	<p style="margin:0">Your token will expire at: </p>
+	<div>
+		<p>
+			<strong style="color:#007AA3"> <strong style="margin-right: 5px;color:#000;font-weight: 300">UTC: </strong> ${new
+				Date(expiresAt).toLocaleString("en-US", { timeZone: "UTC" })} </strong> <br> <strong style="color:#007AA3">
+				<strong style="margin-right: 5px; color:#000;font-weight: 300">PST: </strong>${new
+				Date(expiresAt).toLocaleString("en-US", {
+				timeZone: "America/Los_Angeles"
+				})} </strong>
+		</p>
+		<hr style="width: 100%; margin:0; border: 1px solid lightgray">
+		<div style=" display:flex;flex-direction: column;justify-content: center;align-items: center;">
+			<div>Your orgId:<br>
+				<strong style="color:#007AA3;font-weight: 500;">${orgId}</strong>
+			</div>
+		</div>
+
+		<hr style="width: 100%; margin:0; border: 1px solid lightgray">
+	</div>
+
+	<p>You can now close this tab...</p>
+
+	<div style=" display: flex; justify-content: center; align-items: center;flex-direction: column;">
+		<p style=" color:#C8C8C8; font-size: 0.8rem;">** If you need to refresh, click below and then refresh
+			Desktop browser for
+			new token</p>
+		<a style="text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; cursor: pointer;"
+			href="https://sa-primary-oauth-login.onrender.com/logout">
+			<span class="material-symbols-outlined" style="vertical-align: middle; cursor: pointer;">logout</span> Force Token
+			Refresh
+		</a>
+	</div>
+</body>
+
+</html>
