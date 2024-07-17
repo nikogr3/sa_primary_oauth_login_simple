@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = ["https://desktop.wxcc-us1.cisco.com", "https://desktop.wxcc-eu1.cisco.com", "http://localhost:3000", "http://localhost:3006", "https://idbroker-b-us.webex.com", "https://sa-primary-oauth-login.onrender.com", "https://outbound-campaign-app.onrender.com"];
+      const allowedOrigins = ["https://desktop.wxcc-us1.cisco.com", "https://desktop.wxcc-eu1.cisco.com", "https://desktop.wxcc-anz1.cisco.com", "https://desktop.wxcc-sg1.cisco.com", "http://localhost:3000", "http://localhost:3006", "https://idbroker-b-us.webex.com", "https://sa-primary-oauth-login.onrender.com", "https://outbound-campaign-app.onrender.com"];
       if (allowedOrigins.includes(origin) || !origin) {
         callback(null, true);
       } else {
